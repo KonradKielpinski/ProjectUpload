@@ -1,0 +1,284 @@
+// Page GRID with media query
+
+    .page-content {
+        // display: grid;
+        // grid-template-columns: repeat(6, auto);
+        // grid-template-rows: repeat(4, auto);
+        // grid-gap: 10px;
+        // grid-template-areas:
+        // "header header header header header header"
+        // "navbar navbar navbar navbar navbar navbar"
+        // "main main main main main main"
+        // "main-home main-home main-home main-home main-home main-home"
+        // "footer footer footer footer footer footer";
+        #LogoImg {
+            width: 100%;
+            height: auto;
+            // overflow: hidden;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, auto);
+            justify-content: center;
+            .display-files {
+                #fileInfoImg {
+                    width: auto;
+                    height: 100px;
+                }
+                display: grid;
+                grid-template-areas:
+                "fileInfoImg "
+                "fileInfoTitle"
+                "fileInfoDescription"
+                "fileInfoUsername"
+                "fileInfoFileURL";
+                // justify-content: center;
+                // justify-items: center;
+            }
+            button {
+                width: 100px;
+            }
+            // align-self: center;
+            // justify-self: center;
+            // align-items: center;
+            // justify-items: center;
+        }
+        .header-box {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-areas:
+            "logoImg"
+            "auth";
+            .auth-user {
+                display: grid;
+                // grid-auto-columns: minmax(auto, auto);
+                grid-template-areas:
+                "authForm authForm" 
+                "loginBtn logoutBtn"
+                "registerBtn profile";
+                // "logoutBtn ."
+                // "profile .";
+                justify-content: stretch;
+                // align-items: center;
+                button, a {
+                    width: 100%;
+                }
+                #authForm {
+                    display: grid;
+                    width: 100%;
+                }
+            }
+        }
+        .navbar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(90px, 100px));
+            // align-items: center;
+            justify-content: center;
+            a {
+                width: 100px;
+                // justify-self: center;
+            }
+        }
+        .main-footer {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            .footer-inside {
+                color: white;
+                font-size: 10px;
+                align-self: center;
+                justify-self: center;
+            }
+        }
+    }
+
+@media screen and (min-width: 600px){
+    .page-content {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, auto);
+        // grid-gap: 10px;
+        grid-template-areas:
+        "header header header header header header"
+        "navbar navbar navbar navbar navbar navbar "
+        "main main main main main main"
+        "main-home main-home main-home main-home main-home main-home"
+        "footer footer footer footer footer footer";
+        #logo-img {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+            .upload-form {
+                grid-column: 1 / 7
+            }
+            .display-files {
+                #fileInfoImg {
+                    width: auto;
+                    height: 100px;
+                }
+                display: grid;
+                grid-template-areas:
+                "fileInfoImg"
+                "fileInfoTitle"
+                "fileInfoDescription"
+                "fileInfoUsername"
+                "fileInfoFileURL";
+                justify-content: start;
+            }
+            button {
+                width: 100px;
+            }
+            // align-self: center;
+            // justify-self: center;
+            // align-items: center;
+            // justify-items: center;
+        }
+        .header-box {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-areas:
+            "logoImg"
+            "auth";
+            .auth-user {
+                display: grid;
+                grid-template-areas: 
+                "loginBtn logoutBtn authForm"
+                "registerBtn profile authForm";
+                // "logoutBtn ."
+                // "profile .";
+                justify-content: stretch;
+                // align-items: center;
+                button, a {
+                    width: 100%
+                }
+                #authForm {
+                    display: grid;
+                    width: 100%;
+                }
+            }
+        }
+        .navbar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(90px, 100px));
+            // align-items: center;
+            justify-content: center;
+            a {
+                width: 100px;
+                // justify-self: center;
+            }
+        }
+        .main-footer {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            // padding: 20px;
+            .footer-inside {
+                color: white;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+// GRID-AREA NAMES
+
+// HEADER
+
+.header-box {
+    grid-area: header;
+}
+
+// NAVBAR
+
+.navbar {
+    grid-area: navbar;
+}
+
+// MAIN
+
+.main-content {
+    grid-area: main;
+}
+
+// FOOTER
+
+.main-footer {
+    grid-area: footer;
+}
+
+// AUTH USER
+
+.auth-user {
+    grid-area: auth;
+}
+
+// LOGO IMG
+
+#LogoImg {
+    grid-area: logoImg;
+}
+
+// Login Button
+
+#login {
+    grid-area: loginBtn;
+}
+
+// Register Button
+
+#register {
+    grid-area: registerBtn;
+}
+
+// Logout Button
+
+#logout {
+    grid-area: logoutBtn;
+}
+
+// Profile Button
+
+#profile {
+    grid-area: profile;
+}
+
+// Auth Form
+
+#authForm {
+    grid-area: authForm;
+}
+
+// File info
+
+#fileInfoTitle {
+    grid-area: fileInfoTitle;
+}
+
+#fileInfoDescription {
+    grid-area: fileInfoDescription;
+}
+
+#fileInfoUsername {
+    grid-area: fileInfoUsername;
+}
+
+#fileInfoFileURL {
+    grid-area: fileInfoFileURL;
+}
+
+#fileInfoImg {
+    grid-area: fileInfoImg;
+}
+
+//Main content Home
+
+.main-content-home {
+    grid-area: main-home;
+}

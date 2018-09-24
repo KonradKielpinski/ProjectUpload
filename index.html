@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodersLab</title>
+</head>
+
+<body>
+    <!-- <div class="wrap"> -->
+            <div id="app"></div>
+    <!-- </div> -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBXP_zvntb6FBleCPQlNh2E9lDmvZK7l5k",
+            authDomain: "uploader-b8355.firebaseapp.com",
+            databaseURL: "https://uploader-b8355.firebaseio.com",
+            projectId: "uploader-b8355",
+            storageBucket: "uploader-b8355.appspot.com",
+            messagingSenderId: "27319138844"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="./resources/dist/out.js"></script>
+    <!-- <script src="out.js"></script> -->
+</body>
+
+</html>
